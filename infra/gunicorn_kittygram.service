@@ -3,10 +3,12 @@ Description=gunicorn daemon for Kittygram
 After=network.target
 
 [Service]
-User=ваш_пользователь
+User=mishgan325
 Group=www-data
-WorkingDirectory=/home/ваш_пользователь/infra_sprint1/backend
-ExecStart=/home/ваш_пользователь/infra_sprint1/backend/venv/bin/gunicorn --bind 0.0.0.0:8080 kittygram.wsgi:application
+WorkingDirectory=/home/mishgan325/infra_sprint1/backend/
+ExecStart=/home/mishgan325/infra_sprint1/venv/bin/gunicorn --bind 0.0.0.0:8000 kittygram_backend.wsgi:application
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
+
